@@ -1,19 +1,16 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import sourcemaps from 'rollup-plugin-sourcemaps';
 import clean from 'rollup-plugin-clean';
-import html from '@web/rollup-plugin-html';
 
 export default {
-  input: 'index.html',
+  input: 'index.js',
   output: {
-    dir: 'dist',
+    file: 'bundle.min.js',
+    format: 'es',
     sourcemap: true,
   },
   plugins: [
     clean(),
-    html( {
-        minimize: true
-    }),
     nodeResolve(),
     sourcemaps(),
   ],
