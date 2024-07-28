@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Calendar View</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script type="module">
+        import './listview/listview.js';
+
+        document.getElementById('calendar').options = {
+            calendarID: 'c_f69235e15513c1b6d9579b352a2fb936d219892858a1de50f6ef64e1590ea1b0@group.calendar.google.com',
+            apiKey: 'AIzaSyAUP87OADKceeNNSfbHoMlLO4C6v0wXoMs',
+            //startDate: '2024-7-20',
+            //endDate: '2024-12-21'
+        }
+    </script>
+    <style>
+        :root {
+            font-family: "Open Sans", sans-serif;
+            --list-padding-mod: 10px;
+            --paragraph-margin-mod: 1em 0;
+            --header-margin-mod: .5em 0;
+            --header-fontsize-mod: 1.5em;
+            --header-color-mod: #333;
+            --li-border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<calendar-list-view id="calendar"></calendar-list-view>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{
+  "name": "gcal-list-webcomponent",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "registry": "https://registry.npmjs.org",
+  "files": [
+    "/index.*",
+    "/listview",
+    "/controllers"
+  ],
+  "scripts": {
+    "dist": "npm run build && ./node_modules/.bin/rollup -c",
+    "build": "./node_modules/.bin/tsc && ./node_modules/.bin/rollup -c rollup.config.js",
+    "build:watch": "./node_modules/.bin/tsc --watch && ./node_modules/.bin/rollup -c rollup.config.js",
+    "clean": "rimraf dist",
+    "lint": "npm run lint:eslint",
+    "lint:eslint": "eslint 'src/**/*.ts'",
+    "lint:lit-analyzer": "lit-analyzer",
+    "serve": "npm run build:watch & wds --watch",
+    "serve:prod": "MODE=prod npm run serve"
+  },
+  "private": true,
+  "dependencies": {
+    "lit": "^3.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-replace": "^5.0.2",
+    "@types/dom-webcodecs": "^0.1.3",
+    "@types/offscreencanvas": "^2019.7.0",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "@web/dev-server": "^0.1.31",
+    "@web/rollup-plugin-html": "^2.0.0",
+    "@webgpu/types": "^0.1.40",
+    "eslint": "^8.15.0",
+    "prettier": "^2.6.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.73.0",
+    "rollup-plugin-clean": "^1.0.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "typescript": "~5.2.0"
+  }
+}
