@@ -21,10 +21,16 @@
     "serve": "npm run build:watch & wds --watch",
     "serve:prod": "MODE=prod npm run serve"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "lit": "^3.0.0"
   },
+  "keywords": [
+    "web-components",
+    "google calendar",
+    "typescript",
+    "lit"
+  ],
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-replace": "^5.0.2",
